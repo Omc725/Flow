@@ -90,6 +90,9 @@ class FlowApplication :
     @Inject
     lateinit var profileSlices: dagger.Lazy<ProfileSlices>
 
+    @Inject
+    lateinit var youtubeSyncManager: io.github.aedev.flow.sync.youtube.YouTubeSyncManager
+
     override fun newImageLoader(context: PlatformContext): ImageLoader = imageLoader
 
     companion object {
@@ -111,6 +114,7 @@ class FlowApplication :
         YouTube.cacheDirectory = cacheDir.resolve("innertube_http_cache")
 
         DiscordPresenceRuntime.initialize(this, okHttpClient)
+        youtubeSyncManager.initialize()
 
         val playerPreferences = PlayerPreferences(this)
 

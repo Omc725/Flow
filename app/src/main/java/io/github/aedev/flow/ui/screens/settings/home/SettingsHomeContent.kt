@@ -124,6 +124,7 @@ internal fun SettingsListScope.homeContent(
         page(SettingsDestination.PROFILES)
         page(SettingsDestination.BACKUP)
         page(SettingsDestination.SYNC)
+        page(SettingsDestination.YOUTUBE_SYNC)
         page(SettingsDestination.HISTORY)
         page(SettingsDestination.DOWNLOADS)
     }

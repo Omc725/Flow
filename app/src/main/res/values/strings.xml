@@ -4502,4 +4502,39 @@
     <string name="keyboard_shortcut_exit_fullscreen">Exit fullscreen</string>
     <string name="keyboard_shortcut_faster">Faster</string>
     <string name="keyboard_shortcut_slower">Slower</string>
+
+    <!-- YouTube & YouTube Music Synchronization -->
+    <string name="youtube_sync_title">YouTube Sync</string>
+    <string name="youtube_sync_summary">Continuous account sync with YouTube &amp; YouTube Music</string>
+    <string name="youtube_sync_account_title">Google Account</string>
+    <string name="youtube_sync_account_summary">Sign in to synchronize your liked songs, playlists, and subscriptions</string>
+    <string name="youtube_sync_now_title">Sync Now</string>
+    <string name="youtube_sync_now_summary">Trigger a manual sync with your YouTube account</string>
+    <string name="youtube_sync_continuous_title">Background Synchronization</string>
+    <string name="youtube_sync_continuous_summary">Automatically synchronize your library in the background</string>
+    <string name="youtube_sync_liked_songs_title">Sync Liked Songs</string>
+    <string name="youtube_sync_liked_songs_summary">Keep liked music in sync bidirectionally</string>
+    <string name="youtube_sync_playlists_title">Sync Playlists</string>
+    <string name="youtube_sync_playlists_summary">Synchronize YouTube Music playlists with local playlists</string>
+    <string name="youtube_sync_subscriptions_title">Sync Subscriptions &amp; Artists</string>
+    <string name="youtube_sync_subscriptions_summary">Synchronize subscribed channels and favorite artists</string>
+    <string name="youtube_sync_history_title">Sync Playback History (Scrobble)</string>
+    <string name="youtube_sync_history_summary">Report listened tracks to YouTube Music history</string>
+    <string name="youtube_sync_frequency_title">Sync Frequency</string>
+    <string name="youtube_sync_frequency_summary">How often background sync runs</string>
+    <string name="youtube_sync_connected">Connected</string>
+    <string name="youtube_sync_sign_out">Sign Out</string>
+    <string name="youtube_sync_connect_account_title">Connect Google Account</string>
+    <string name="youtube_sync_connect_account_desc">Log in to synchronize your liked music, playlists, and subscriptions automatically.</string>
+    <string name="youtube_sync_sign_in_google">Sign in with Google</string>
+    <string name="youtube_sync_paste_cookie">Paste Cookie</string>
+    <string name="youtube_sync_import_file">Import Cookie File (cookies.txt)</string>
+    <string name="youtube_sync_import_local_cookies">Load Project Cookies (cookies.txt)</string>
+    <string name="youtube_sync_status_syncing">Syncing…</string>
+    <string name="youtube_sync_action_sync_now">Sync Now</string>
+    <string name="youtube_sync_options_header">Sync Settings</string>
+    <string name="youtube_login_dialog_title">Sign in to Google</string>
+    <string name="youtube_sync_manual_cookie_title">Enter Cookie</string>
+    <string name="youtube_sync_manual_cookie_desc">Paste your YouTube Music cookies in Netscape format (cookies.txt) or standard HTTP header format.</string>
+    <string name="youtube_sync_cookie_label">Cookie data</string>
 </resources>

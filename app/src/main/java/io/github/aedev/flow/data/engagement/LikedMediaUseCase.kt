@@ -17,6 +17,7 @@ class LikedMediaUseCase
         private val likes: LikedVideosRepository,
         private val musicLibrary: MusicLibrary,
         private val scrobbler: Scrobbler,
+        private val youtubeSyncManager: io.github.aedev.flow.sync.youtube.YouTubeSyncManager? = null,
     ) {
         /** Unlikes [videoIds]; the result is what [restore] needs to undo it. */
         suspend fun unlike(videoIds: Collection<String>): List<LikedVideoInfo> {
@@ -24,6 +25,7 @@ class LikedMediaUseCase
             taken.filter { it.isMusic }.forEach {
                 musicLibrary.removeFromFavorites(it.videoId)
                 scrobbler.onLikeChanged(it.toMusicTrack(), liked = false)
+                youtubeSyncManager?.onTrackLiked(it.videoId, false)
             }
             return taken
         }
@@ -33,6 +35,7 @@ class LikedMediaUseCase
             taken.filter { it.isMusic }.map { it.toMusicTrack() }.forEach {
                 musicLibrary.addToFavorites(it)
                 scrobbler.onLikeChanged(it, liked = true)
+                youtubeSyncManager?.onTrackLiked(it.videoId, true)
             }
         }
     }

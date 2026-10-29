@@ -2247,4 +2247,39 @@
     <string name="settings_keywords_gestures">kaydır, çift tıkla, çift dokunma, jestler, el hareketleri, dokunma</string>
     <string name="settings_speed_preset_hint">ör. 1.35</string>
     <string name="settings_speed_preset_add">Ön ayar ekle</string>
+
+    <!-- YouTube ve YouTube Music Senkronizasyonu -->
+    <string name="youtube_sync_title">YouTube Eşitleme</string>
+    <string name="youtube_sync_summary">YouTube ve YouTube Music ile sürekli hesap eşitleme</string>
+    <string name="youtube_sync_account_title">Google Hesabı</string>
+    <string name="youtube_sync_account_summary">Beğenilen şarkıları, çalma listelerini ve abonelikleri eşitlemek için giriş yapın</string>
+    <string name="youtube_sync_now_title">Şimdi Eşitle</string>
+    <string name="youtube_sync_now_summary">YouTube hesabınızla hemen manuel eşitleme yapın</string>
+    <string name="youtube_sync_continuous_title">Arka Plan Eşitlemesi</string>
+    <string name="youtube_sync_continuous_summary">Kitaplığınızı arka planda düzenli olarak otomatik eşitleyin</string>
+    <string name="youtube_sync_liked_songs_title">Beğenilen Şarkıları Eşitle</string>
+    <string name="youtube_sync_liked_songs_summary">Beğenilen müzikleri çift yönlü olarak senkronize tut</string>
+    <string name="youtube_sync_playlists_title">Çalma Listelerini Eşitle</string>
+    <string name="youtube_sync_playlists_summary">YouTube Music çalma listelerini yerel listelerle senkronize et</string>
+    <string name="youtube_sync_subscriptions_title">Abonelikleri ve Sanatçıları Eşitle</string>
+    <string name="youtube_sync_subscriptions_summary">Abone olunan kanalları ve favori sanatçıları eşitle</string>
+    <string name="youtube_sync_history_title">Oynatma Geçmişini Eşitle (Scrobble)</string>
+    <string name="youtube_sync_history_summary">Dinlenen parçaları YouTube Music dinleme geçmişine bildir</string>
+    <string name="youtube_sync_frequency_title">Eşitleme Sıklığı</string>
+    <string name="youtube_sync_frequency_summary">Arka plan eşitlemesinin çalışma sıklığı</string>
+    <string name="youtube_sync_connected">Bağlandı</string>
+    <string name="youtube_sync_sign_out">Çıkış Yap</string>
+    <string name="youtube_sync_connect_account_title">Google Hesabı Bağla</string>
+    <string name="youtube_sync_connect_account_desc">Beğenilen müziklerinizi, çalma listelerinizi ve aboneliklerinizi otomatik eşitlemek için giriş yapın.</string>
+    <string name="youtube_sync_sign_in_google">Google ile Giriş Yap</string>
+    <string name="youtube_sync_paste_cookie">Çerez Yapıştır</string>
+    <string name="youtube_sync_import_file">Çerez Dosyası Seç (cookies.txt)</string>
+    <string name="youtube_sync_import_local_cookies">Proje Dizinindeki Çerezleri Yükle</string>
+    <string name="youtube_sync_status_syncing">Eşitleniyor…</string>
+    <string name="youtube_sync_action_sync_now">Şimdi Eşitle</string>
+    <string name="youtube_sync_options_header">Eşitleme Ayarları</string>
+    <string name="youtube_login_dialog_title">Google ile Giriş Yap</string>
+    <string name="youtube_sync_manual_cookie_title">Çerez Girin</string>
+    <string name="youtube_sync_manual_cookie_desc">YouTube Music çerezlerinizi Netscape formatında (cookies.txt) veya standart HTTP başlığı biçiminde yapıştırın.</string>
+    <string name="youtube_sync_cookie_label">Çerez verisi</string>
 </resources>

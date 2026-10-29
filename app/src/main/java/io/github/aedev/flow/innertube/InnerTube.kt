@@ -258,9 +258,9 @@ class InnerTube {
             if (setLogin && client.loginSupported) {
                 cookie?.let { cookie ->
                     append("cookie", cookie)
-                    if ("SAPISID" !in cookieMap) return@let
+                    val sapisid = cookieMap["SAPISID"] ?: cookieMap["__Secure-3PAPISID"] ?: cookieMap["__Secure-1PAPISID"] ?: return@let
                     val currentTime = System.currentTimeMillis() / 1000
-                    val sapisidHash = sha1("$currentTime ${cookieMap["SAPISID"]} $origin")
+                    val sapisidHash = sha1("$currentTime $sapisid $origin")
                     append("Authorization", "SAPISIDHASH ${currentTime}_$sapisidHash")
                 }
             }
@@ -809,6 +809,12 @@ class InnerTube {
     }
 
     suspend fun getSwJsData() = httpClient.get("https://music.youtube.com/sw.js_data")
+
+    suspend fun ping(url: String, client: YouTubeClient = YouTubeClient.WEB_REMIX) = withRetry {
+        httpClient.get(url) {
+            ytClient(client, setLogin = true)
+        }
+    }
 
     suspend fun accountMenu(client: YouTubeClient) =
         httpClient.post("account/account_menu") {

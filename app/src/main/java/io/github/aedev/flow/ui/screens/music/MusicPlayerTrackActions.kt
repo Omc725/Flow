@@ -32,6 +32,7 @@ internal class MusicPlayerTrackActions(
     private val musicBrain: MusicBrainEngine,
     private val playerPreferences: PlayerPreferences,
     private val scrobbler: Scrobbler,
+    private val youtubeSyncManager: io.github.aedev.flow.sync.youtube.YouTubeSyncManager? = null,
 ) {
     fun toggleLike() {
         val currentTrack = uiState.value.currentTrack ?: return
@@ -42,6 +43,7 @@ internal class MusicPlayerTrackActions(
         val like = !uiState.value.isLiked
         uiState.update { it.copy(isLiked = like) }
         scrobbler.onLikeChanged(currentTrack, like)
+        youtubeSyncManager?.onTrackLiked(currentTrack.videoId, like)
         scope.launch(PerformanceDispatcher.diskIO) {
             if (like) {
                 playlistRepository.addToFavorites(currentTrack)

@@ -44,6 +44,7 @@ internal fun destinationIcon(destination: SettingsDestination): ImageVector =
         SettingsDestination.INTEGRATIONS -> Icons.Outlined.Extension
         SettingsDestination.BACKUP -> Icons.Outlined.CloudSync
         SettingsDestination.SYNC -> Icons.Outlined.Devices
+        SettingsDestination.YOUTUBE_SYNC -> Icons.Outlined.CloudSync
         SettingsDestination.HISTORY -> Icons.Outlined.History
         SettingsDestination.DOWNLOADS -> Icons.Outlined.Download
         SettingsDestination.NOTIFICATIONS -> Icons.Outlined.NotificationsNone

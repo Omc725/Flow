@@ -2727,6 +2727,11 @@ object YouTube {
                 ?.toAccountInfo()!!
         }
 
+    suspend fun pingPlayback(url: String): Result<Unit> =
+        runCatching {
+            innerTube.ping(url)
+        }
+
     suspend fun getMediaInfo(videoId: String): Result<MediaInfo> =
         runCatching {
             return innerTube.getMediaInfo(videoId)

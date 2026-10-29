@@ -79,6 +79,7 @@ internal object DestinationIndex {
             SettingsDestination.TOPICS -> R.string.settings_topics_summary
             SettingsDestination.INTEGRATIONS -> R.string.settings_integrations_summary
             SettingsDestination.SCROBBLING -> R.string.scrobbling_summary
+            SettingsDestination.YOUTUBE_SYNC -> R.string.youtube_sync_summary
             SettingsDestination.BACKUP -> R.string.settings_backup_summary
             SettingsDestination.SYNC -> R.string.sync_devices_subtitle
             SettingsDestination.PROFILES -> R.string.profiles_summary

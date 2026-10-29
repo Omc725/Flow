@@ -54,6 +54,7 @@ class MusicPlayerViewModel
         private val scrobbler: Scrobbler,
         private val lyricsHelper: LyricsHelper,
         localLyrics: LocalLyricsReader,
+        private val youtubeSyncManager: io.github.aedev.flow.sync.youtube.YouTubeSyncManager,
     ) : ViewModel() {
         private val _uiState = MutableStateFlow(MusicPlayerUiState())
         val uiState: StateFlow<MusicPlayerUiState> = _uiState.asStateFlow()
@@ -98,6 +99,7 @@ class MusicPlayerViewModel
                 musicBrain,
                 playerPreferences,
                 scrobbler,
+                youtubeSyncManager,
             )
 
         init {
@@ -166,6 +168,7 @@ class MusicPlayerViewModel
                             checkIfFavorite(it.videoId)
                             fetchLyrics(it.videoId, it.artist, it.title, it.duration, it.album)
                             fetchRelatedContent(it.videoId)
+                            youtubeSyncManager.reportPlayback(it.videoId)
                         } else {
                             favoriteJob?.cancel()
                             _uiState.update { state -> state.copy(isLiked = false) }

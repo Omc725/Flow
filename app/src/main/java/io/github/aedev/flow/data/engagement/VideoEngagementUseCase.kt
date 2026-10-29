@@ -46,6 +46,7 @@ class VideoEngagementUseCase
         private val likedVideosRepository: LikedVideosRepository,
         private val signals: VideoEngagementSignals,
         private val videoStats: VideoStatsRecorder,
+        private val youtubeSyncManager: io.github.aedev.flow.sync.youtube.YouTubeSyncManager? = null,
     ) {
         fun subscriptionState(channelId: String): Flow<Boolean> = subscriptionRepository.isSubscribed(channelId)
 
@@ -114,6 +115,7 @@ class VideoEngagementUseCase
                 subscriptionRepository.unsubscribe(channelId)
             }
             onApplied(subscribed)
+            youtubeSyncManager?.onChannelSubscribed(channelId, subscribed)
             runCatching {
                 signals.channelSubscriptionChanged(channelId, channelName, subscribed)
             }.onFailure { Log.w(TAG, "Failed to record subscription signal", it) }
@@ -148,6 +150,7 @@ class VideoEngagementUseCase
             )
             onApplied()
             videoStats.onAction(LedgerAction.LIKE)
+            youtubeSyncManager?.onTrackLiked(video.id, true)
             if (signalVideo == null) return
             try {
                 signals.videoInteraction(signalVideo, InteractionType.LIKED)
@@ -182,5 +185,6 @@ class VideoEngagementUseCase
         suspend fun removeLike(videoId: String) {
             likedVideosRepository.removeLikeState(videoId)
             videoStats.onDislikeRemoved(videoId)
+            youtubeSyncManager?.onTrackLiked(videoId, false)
         }
     }

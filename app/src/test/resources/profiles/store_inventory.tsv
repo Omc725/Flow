@@ -19,6 +19,7 @@ prefs_datastore	video_queue	main:data/video/VideoQueueStore.kt	PROFILE	private	T
 prefs_datastore	music_queue	main:data/local/QueuePersistence.kt	PROFILE	private	The queue the person left.
 prefs_datastore	scrobbling	main:data/scrobble/ScrobbleStore.kt	PROFILE	private	Personal Last.fm and ListenBrainz accounts and pending scrobbles.
 prefs_datastore	discord_presence	github:discord/DiscordPreferences.kt	PROFILE	private	A personal Discord link.
+prefs_datastore	youtube_sync	main:sync/youtube/YouTubeSyncPreferences.kt	PROFILE	private	YouTube and YouTube Music account credentials and sync preferences.
 prefs_datastore	sync_identity	main:sync/identity/DeviceIdentity.kt	DEVICE	-	Device id and name.
 prefs_datastore	sync_brain_crdt	main:sync/merge/BrainCrdtStore.kt	DEFAULT_ONLY	-	Bound to Default's brain; only Default syncs.
 prefs_datastore	sync_music_brain_crdt	main:sync/merge/MusicBrainCrdtStore.kt	DEFAULT_ONLY	-	Bound to Default's music brain; only Default syncs.
@@ -110,6 +111,7 @@ public_dir	Download/Flow, Movies/Flow, Music/Flow	main:data/video/VideoDownloadM
 webview	app_webview/	main:utils/potoken/PoTokenWebView.kt	PROFILE	identity	Attestation session; suffixed per profile on API 28+, cleared at switch on 26-27.
 webview	app_webview/	main:utils/cipher/CipherWebView.kt	PROFILE	identity	Shares the WebView data folder; suffixed per profile on API 28+.
 webview	app_webview/	github:discord/DiscordLoginActivity.kt	PROFILE	identity	Discord login cookies; suffixed per profile on API 28+.
+webview	app_webview/	main:ui/screens/settings/youtube/YouTubeSyncDialogs.kt	PROFILE	identity	Google sign-in session for YouTube synchronization.
 glance_state	appWidget-<id>	main:widget/playlist/PlaylistWidgetConfig.kt	DEVICE	-	The widget belongs to the launcher; its playlist gets keyed per profile.
 glance_state	appWidget-<id>	main:widget/quickactions/QuickActionsConfig.kt	DEVICE	-	The widget belongs to the launcher.
 factory_datastore	profiles_registry.json	main:data/profile/ProfileRegistry.kt	DEVICE	-	The profiles and which one is active; the one store every profile shares.

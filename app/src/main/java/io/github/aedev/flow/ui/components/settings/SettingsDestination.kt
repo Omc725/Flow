@@ -39,6 +39,7 @@ enum class SettingsDestination(
     TOPICS("topics", R.string.settings_topics_title),
     INTEGRATIONS("integrations", R.string.settings_integrations_title),
     SCROBBLING("scrobbling", R.string.scrobbling_title, INTEGRATIONS),
+    YOUTUBE_SYNC("youtube_sync", R.string.youtube_sync_title, INTEGRATIONS),
     BACKUP("backup", R.string.settings_backup_title),
     SYNC("sync", R.string.sync_devices_title),
     PROFILES("profiles", R.string.profiles_title),
